@@ -1,5 +1,6 @@
 <mat-toolbar class="max-w-8xl mx-auto border-x justify-between">
     <p routerLink="home">Code with IY Store</p>
+     <!-- <img src="/src/images/photo_2024-03-13_11-49-46.jp" alt=""> -->
     <button mat-icon-button [matMenuTriggerFor]="menu">
         <mat-icon [matBadge]="1" matBadgeColor="warn">
             shopping_cart
@@ -10,6 +11,34 @@
             <div class="pb-3 flex justify-between">
                 <span class="mr-10">1 item</span>
                 <p routerLink="cart">View Cart</p>
+            </div>
+            <div class="py-2">
+                <div class="flex justify-between font-light mb-2">
+                    Keyboard x 1 
+                    <span class="font-bold">
+                        {{'1500' | currency: 'NG'}}
+                    </span>
+                </div>
+                <div class="flex justify-between font-light py-3">
+                    Total:
+                    <span class="font-bold">
+                        {{'1500' | currency: 'NG'}}
+                    </span>
+                </div>
+                <div class="pt-3 justify-between flex">
+                    <button class="bg-rose-600 text-white rounded-full w-9 h-9">
+                        <mat-icon>
+                            remove_shopping_cart
+                        </mat-icon>
+                    </button>
+                    <button
+                        routerLink="cart"
+                        class="bg-green-600 text-white rounded-full w-9 h-9">
+                        <mat-icon>
+                            remove_shopping_cart
+                        </mat-icon>
+                    </button>
+                </div>
             </div>
         </div>        
     </mat-menu>

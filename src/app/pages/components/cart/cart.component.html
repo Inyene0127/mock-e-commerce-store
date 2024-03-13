@@ -1,0 +1,13 @@
+<mat-card class="mx-auto max-w-8xl" *ngIf="cart.items.length">
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 w-full">
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; column: displayedColumns"></tr>
+        <tr mat-footer-row *matFooterRowDef="displayedColumns"></tr>
+    </table>
+</mat-card>
+<mat-card class="mx-auto max-w-8xl" *ngIf="!cart.items.length">
+    <p>
+        Your cart is empty
+        <button mat-raised-button routerLink="/home">Start Shopping Here</button>
+    </p>
+</mat-card>

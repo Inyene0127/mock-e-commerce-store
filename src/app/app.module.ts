@@ -17,11 +17,21 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { HeaderComponent } from './header/header.component';
+import { HomeComponent } from './pages/components/home/home.component';
+import { ProductsHeaderComponent } from './pages/components/products-header/products-header.component';
+import { FiltersComponent } from './pages/components/filters/filters.component';
+import { ProductBoxComponent } from './pages/components/product-box/product-box.component';
+import { CartComponent } from './pages/components/cart/cart.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    HomeComponent,
+    ProductsHeaderComponent,
+    FiltersComponent,
+    ProductBoxComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
