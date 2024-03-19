@@ -49,6 +49,9 @@ import { CartComponent } from './pages/components/cart/cart.component';
     MatSnackBarModule,
     MatListModule,
   ],
+  exports: [
+    MatTableModule
+  ],
   providers: [
     provideAnimationsAsync()
   ],

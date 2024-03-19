@@ -18,14 +18,17 @@ export class CartComponent implements OnInit{
   displayedColumns: Array<string> = [
     'product',
     'name',
-    'price',
-    'quantity',
-    'total',
-    'action'
+    // 'price',
+    // 'quantity',
+    // 'total',
+    // 'action'
   ]
-  constructor(){}
+  constructor(){
+    
+  }
   ngOnInit(): void {
       this.dataSource = this.cart.items;
+      console.log(this.dataSource);
   }
 
 }
