@@ -9,7 +9,7 @@ export class FiltersComponent implements OnInit{
   constructor(){}
   @Output() categoryChange = new EventEmitter<string>();
   categories:Array<string> = [
-    'shoes', 'bags', 'shirts'
+    'Tables', 'Accessories', 'TV'
   ]
   ngOnInit(): void {
       
