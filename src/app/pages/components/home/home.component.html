@@ -7,7 +7,7 @@
     </div>
 </mat-drawer>
         <mat-drawer-content class="p-5">
-            <app-products-header (columnUpdate)="colChange($event)"></app-products-header>
+            <app-products-header (addToCart)="onAddToCart($event)" (columnUpdate)="colChange($event)"></app-products-header>
             <mat-grid-list gutterSize="16" [cols]="columnCount" [rowHeight]="rowHeight">
                 <mat-grid-tile>
                     <app-product-box class="w-full" [fullWidthMode]="columnCount === 1"></app-product-box>

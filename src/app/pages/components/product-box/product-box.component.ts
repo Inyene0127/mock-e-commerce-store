@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Product } from '../../../../models/product.model';
+import { CartService } from '../../../../services/cart.service';
 
 @Component({
   selector: 'app-product-box',
@@ -18,12 +19,13 @@ export class ProductBoxComponent implements OnInit {
     image: 'assets/images/photo_2024-03-13_11-50-07.jpg'
   }
   
-  constructor(){}
+  constructor(){
+    
+  }
   ngOnInit(): void {
-      this.onAddToCart.emit(this.product);
   }
   addToCart(): void{
-
+    this.onAddToCart.emit(this.product);
   }
 
 }
