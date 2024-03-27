@@ -31,12 +31,11 @@ export class HomeComponent implements OnInit {
     this.category = newCategory;
   }
   onAddToCart(product: Product): void{
-    this.cartService.addToCart({
+    return this.cartService.addToCart({
       product: product.image,
       name: product.title,
       price: product.price,
       quantity: 1,
-      id: product.id
+      id: product.id,
     })}
-
 }

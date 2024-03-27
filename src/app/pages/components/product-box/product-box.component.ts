@@ -9,7 +9,6 @@ import { CartService } from '../../../../services/cart.service';
 })
 export class ProductBoxComponent implements OnInit {
   @Input() fullWidthMode = false;
-  @Output() onAddToCart = new EventEmitter();
   product: Product | undefined = {
     id: 1,
     title: 'TV Stand',
@@ -18,6 +17,7 @@ export class ProductBoxComponent implements OnInit {
     description: 'A beautiful TV stand',
     image: 'assets/images/photo_2024-03-13_11-50-07.jpg'
   }
+  @Output() addingItemToCart = new EventEmitter<Product>();
   
   constructor(){
     
@@ -25,7 +25,7 @@ export class ProductBoxComponent implements OnInit {
   ngOnInit(): void {
   }
   addToCart(): void{
-    this.onAddToCart.emit(this.product);
+    this.addingItemToCart.emit(this.product);
   }
 
 }
